@@ -22,7 +22,7 @@ int chords_note_to_note_string(int note, char *note_buf, int buf_size,
   return 0;
 }
 
-double chords_note_to_frequency(int note) {
-  // A5 = 440 Hz, corresponds to note number 69
-  return 440.0 * pow(2.0, (note - 69) / 12.0);
+double chords_note_to_frequency(int note, double reference_freq) {
+  // A5 = usually about 440 Hz, corresponds to note number 69
+  return reference_freq * pow(2.0, (note - 69) / 12.0);
 }

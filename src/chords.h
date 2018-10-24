@@ -31,4 +31,10 @@ int chords_note_string_to_note(char *note_string, notation_lang notation,
 int chords_note_to_note_string(int note, char *note_buf, int buf_size,
                                notation_lang notation, int base_octave,
                                key main_key);
-double chords_note_to_frequency(int note);
+/**
+ * Converts note number to frequency.
+ * @param note Note number.
+ * @param reference_freq Frequency of a reference note, A5 (usually about 440 Hz).
+ * @return Frequency of note number `note` in respect to the reference.
+ */
+double chords_note_to_frequency(int note, double reference_freq);

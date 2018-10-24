@@ -97,6 +97,6 @@
 
 int main() {
   // test middle C conversion (must print approx. 261.6)
-  printf("The frequency for middle C is about %8.3lf Hz\n", chords_note_to_frequency(60));
+  printf("The frequency for middle C is about %8.3lf Hz\n", chords_note_to_frequency(60, 440));
   return 0;
 }
